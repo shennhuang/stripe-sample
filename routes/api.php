@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PaymentLinkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/payment/link', [PaymentLinkController::class, 'index']);
